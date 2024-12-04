@@ -19,11 +19,12 @@ export default function Menu({ buttons }: { buttons: string[] }) {
       switch (selectedIndex) {
 
         case 1:
-          router.push('/About')
+          router.replace('/About')
           break;
 
         case destructiveButtonIndex:
           if (router.canDismiss()) { router.dismissAll() }
+          console.log("oi")
           router.replace('/')
           // Delete
           break;

@@ -45,6 +45,7 @@ export default function List() {
       <Logo />
       <SectionList
         sections={sectionListData}
+        keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
           <View style={styles.itemContainer}>
             <Image source={{ uri: item.passenger_avatar }} style={styles.avatar} />

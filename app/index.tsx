@@ -13,7 +13,7 @@ export default function Login() { // Use a descriptive component name
   const handleLogin = () => {
     if (username === 'usuario' && password === '123') {
       setErrorMessage(''); // Clear any previous error message
-      router.push("/List");
+      router.replace("/List");
     } else {
       setErrorMessage('Invalid username or password. Please try again.');
     }
