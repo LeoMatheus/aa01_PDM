@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Linking } from 'react-native';
 import React from 'react';
 import Logo from '@/components/Logo'; // Assuming Logo component is imported correctly
 
@@ -11,7 +11,7 @@ export default function About() {
         <Text style={styles.version}>version 1.0</Text>
         <Text style={styles.developedBy}>developed by</Text>
         <Text style={styles.developerName}>Leo Matheus Raifur</Text>
-        <Text style={styles.githubLink}>https://github.com/LeoMatheus</Text>
+        <Text style={styles.githubLink} onPress={() => Linking.openURL('https://github.com/LeoMatheus')}>https://github.com/LeoMatheus</Text>
       </View>
     </View>
   );

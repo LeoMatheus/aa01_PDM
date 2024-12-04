@@ -3,11 +3,11 @@ import React from 'react'
 import { useActionSheet } from '@expo/react-native-action-sheet'
 import { router } from 'expo-router';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-export default function Menu() {
+export default function Menu({ buttons }: { buttons: string[] }) {
   const { showActionSheetWithOptions } = useActionSheet();
 
   const onPress = () => {
-    const options = ['Logout', 'About'];
+    const options = buttons;
     const destructiveButtonIndex = 0;
     const cancelButtonIndex = 2;
 

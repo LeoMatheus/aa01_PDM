@@ -41,6 +41,7 @@ export default function List() {
   });
   return (
     <View style={styles.container}>
+
       <Logo />
       <SectionList
         sections={sectionListData}

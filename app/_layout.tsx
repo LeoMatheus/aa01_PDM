@@ -8,9 +8,10 @@ export default function _layout() {
   return (
     <ActionSheetProvider>
       <Stack >
-        <Stack.Screen name='/' options={{ headerShown: false }} />
-        <Stack.Screen name='List' options={{ title: "Asas de Papelao", headerLeft: () => null, headerRight: () => <Menu /> }} />
-        <Stack.Screen name='About' options={{ title: "Sobre", headerRight: () => <Menu /> }} />
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+
+        <Stack.Screen name='List/index' options={{ title: "Lista", headerLeft: () => null, headerRight: () => <Menu buttons={["Logout", "About"]} /> }} />
+        <Stack.Screen name='About/index' options={{ title: "Sobre", headerLeft: () => null, headerRight: () => <Menu buttons={["Logout"]} /> }} />
       </Stack>
     </ActionSheetProvider>
   )
